@@ -47,3 +47,47 @@ After building, the pdf file will be output to:
 ```bash
 ./Bluepaper.pdf
 ```
+
+### Build Instructions for Non-English language
+
+Create a new folder for special font X
+```bash
+mkdir -p /usr/share/fonts/myfonts
+```
+
+Copy the font X into the new folder and run commands in it.
+Create an index of scalable font files for font X. A new file fonts.scale is created.
+```bash
+sudo mkfontscale
+```
+
+Create an index of X font files in a directory. A new file fonts.dir is created.
+```bash
+sudo mkfontdir
+```
+
+Build font information cache files
+```bash
+sudo fc-cache -fv
+```
+
+Restart and run fc-list, the new font should be added.
+
+Add extra setting for XeTeXlinebreaklocale. Go to /usr/share/pandoc/data/templates and export the template
+```bash
+pandoc -D latex > template.latex
+```
+
+Add "\XeTeXlinebreaklocale "zh" after below command.
+```bash
+$if(mathfont)$
+    \setmathfont(Digits,Latin,Greek){$mathfont$}
+$endif$
+```
+
+Complie using pandoc
+```bash
+pandoc -f markdown -t latex  -M mainfont:KaiTi_GB2312 --latex-engine=xelatex -o Bluepaper_CN.pdf --template=./template.latex Bluepaper_CN.md
+```
+
+

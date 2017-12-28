@@ -15,19 +15,19 @@ header-includes:
     - \fancyhead[L]{\includegraphics[width=5cm, height=1cm]{headerimage}}
     - \fancyfoot[C]{\thepage}
     - \usepackage{fontspec}
-    - \setmainfont{Latin Modern Sans}
+    - \setmainfont{KaiTi_GB2312}
     - \fontsize{13pt}{13pt}
     - \usepackage[hang]{footmisc}
 ---
 \pagecolor{myblue}
 \thispagestyle{firstpagestyle}
 
-\textcolor{mygray}{一个使网上出版商和内容行业可以使用智能社交货币的协议}
+\textcolor{mygray}{一个让互联网出版商和内容行业可以使用智能社交货币的协议}
 
 
 ## 介绍
 
-Steem为可公开访问和不可篡改的内容提供了一个可扩展的区块链协议[^fn1]，同时带来快速和低费用的数字代币(称为STEEM)[^fn2]，使得人们可以运用他们的脑力赚取货币（被称为“脑力证明”）。此协议的两个部分，区块链和代币，互相依赖对方的安全性、不变性和持久性，相互依存。Steem已经成功运营一年多，目前已经在处理的交易数量上超过了比特币和以太坊.[^fn3]
+Steem为可公开访问和不可篡改的内容提供了一个可扩展的区块链协议[^fn1]，同时带来快速和低费用的数字代币(称为STEEM)[^fn2]，使得人们可以运用他们的脑力赚取代币(被称为“脑力证明”)。此协议的两个部分，区块链和代币，互相依赖对方的安全性、不变性和持久性，相互依存。Steem已经成功运营一年多，目前已经在处理的交易数量上超过了比特币和以太坊.[^fn3]
 
 相比其他区块链项目，Steem以首个能公开访问的、以明文形式保存不可篡改内容并内置奖励机制的数据库脱颖而出。这使得Steem成为一个公共出版平台，任何互联网应用可以从从中获取和共享数据，并奖励那些贡献最有价值内容的人。
 
